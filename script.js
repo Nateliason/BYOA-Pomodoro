@@ -54,9 +54,6 @@ function resetTimer() {
     updateDisplay(timeLeft);
     startButton.textContent = 'Start';
     statusText.textContent = 'Time to focus!';
-    modeToggleButton.textContent = 'Rest Mode';
-    
-    // Reset button styling
     modeToggleButton.classList.remove('work-mode', 'rest-mode');
     modeToggleButton.classList.add('work-mode');
 }
@@ -75,10 +72,9 @@ function toggleMode() {
     isWorkTime = !isWorkTime;
     timeLeft = isWorkTime ? WORK_TIME : BREAK_TIME;
     updateDisplay(timeLeft);
-    modeToggleButton.textContent = isWorkTime ? 'Rest Mode' : 'Work Mode';
+    
     statusText.textContent = isWorkTime ? 'Time to focus!' : 'Take a break!';
     
-    // Update button styling
     modeToggleButton.classList.remove('work-mode', 'rest-mode');
     modeToggleButton.classList.add(isWorkTime ? 'work-mode' : 'rest-mode');
     
