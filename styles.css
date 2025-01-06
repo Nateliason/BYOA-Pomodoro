@@ -139,7 +139,7 @@ h1 {
 }
 
 .status {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 #status-text {
@@ -150,8 +150,8 @@ h1 {
 
 .mode-icon {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 1rem;
+    right: 1rem;
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -280,7 +280,7 @@ h1 {
 @media (max-width: 480px) {
     .container {
         margin: 1rem;
-        padding: 1.5rem;
+        padding: 1rem;
         width: calc(100% - 2rem);
         min-width: 280px;
     }
@@ -301,5 +301,10 @@ h1 {
     .modal-content {
         width: calc(100% - 2rem);
         padding: 1.5rem;
+    }
+    
+    .mode-icon {
+        top: 0.75rem;
+        right: 0.75rem;
     }
 } 
