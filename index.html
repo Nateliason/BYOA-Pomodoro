@@ -24,11 +24,20 @@
             </svg>
         </div>
         <h1>Pomodoro Timer</h1>
+        <div id="focus-prompt" class="modal hidden">
+            <div class="modal-content">
+                <h2>What are you focusing on?</h2>
+                <input type="text" id="focus-input" placeholder="Enter your focus...">
+                <button id="focus-submit">Start Focusing</button>
+            </div>
+        </div>
+        <div id="focus-display" class="focus-text hidden"></div>
         <div class="timer">
             <span id="minutes">25</span>:<span id="seconds">00</span>
         </div>
         <div class="controls">
             <button id="start">Start</button>
+            <button id="add-time">+5 min</button>
             <button id="reset">Reset</button>
         </div>
         <div class="status">
