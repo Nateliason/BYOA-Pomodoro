@@ -8,42 +8,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div id="mode-toggle" class="mode-icon work-mode" title="Switch to rest mode">
-            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" fill="currentColor"/>
-                <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z" fill="currentColor"/>
-                <path d="M12 19C12.5523 19 13 19.4477 13 20V22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22V20C11 19.4477 11.4477 19 12 19Z" fill="currentColor"/>
-                <path d="M23 12C23 12.5523 22.5523 13 22 13H20C19.4477 13 19 12.5523 19 12C19 11.4477 19.4477 11 20 11H22C22.5523 11 23 11.4477 23 12Z" fill="currentColor"/>
-                <path d="M5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12Z" fill="currentColor"/>
-                <path d="M19.7782 4.22183C20.1687 4.61235 20.1687 5.24551 19.7782 5.63604L18.364 7.05025C17.9735 7.44077 17.3403 7.44077 16.9498 7.05025C16.5593 6.65972 16.5593 6.02656 16.9498 5.63604L18.364 4.22183C18.7545 3.8313 19.3877 3.8313 19.7782 4.22183Z" fill="currentColor"/>
-                <path d="M7.05025 16.9498C7.44077 17.3403 7.44077 17.9735 7.05025 18.364L5.63604 19.7782C5.24551 20.1687 4.61235 20.1687 4.22183 19.7782C3.8313 19.3877 3.8313 18.7545 4.22183 18.364L5.63604 16.9498C6.02656 16.5593 6.65972 16.5593 7.05025 16.9498Z" fill="currentColor"/>
-            </svg>
-            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00006C7 6.02097 8.62837 3.42225 11.0437 2.04529C5.96861 2.52399 2 6.79571 2 12.0001C2 17.5229 6.47715 22.0001 12 22.0001C17.2044 22.0001 21.4761 18.0315 21.9548 12.9564Z" fill="currentColor"/>
-            </svg>
-        </div>
-        <h1>Pomodoro Timer</h1>
-        <div id="focus-prompt" class="modal hidden">
-            <div class="modal-content">
-                <h2>What are you focusing on?</h2>
-                <input type="text" id="focus-input" placeholder="Enter your focus...">
-                <button id="focus-submit">Start Focusing</button>
+    <div class="banner">
+        <a href="http://buildyourownapps.ai" target="_blank">
+            Go from zero coding knowledge to building apps like this in the Build Your Own Apps course
+        </a>
+    </div>
+    <main>
+        <div class="container">
+            <div id="mode-toggle" class="mode-icon work-mode" title="Switch to rest mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" fill="currentColor"/>
+                    <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z" fill="currentColor"/>
+                    <path d="M12 19C12.5523 19 13 19.4477 13 20V22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22V20C11 19.4477 11.4477 19 12 19Z" fill="currentColor"/>
+                    <path d="M23 12C23 12.5523 22.5523 13 22 13H20C19.4477 13 19 12.5523 19 12C19 11.4477 19.4477 11 20 11H22C22.5523 11 23 11.4477 23 12Z" fill="currentColor"/>
+                    <path d="M5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12Z" fill="currentColor"/>
+                    <path d="M19.7782 4.22183C20.1687 4.61235 20.1687 5.24551 19.7782 5.63604L18.364 7.05025C17.9735 7.44077 17.3403 7.44077 16.9498 7.05025C16.5593 6.65972 16.5593 6.02656 16.9498 5.63604L18.364 4.22183C18.7545 3.8313 19.3877 3.8313 19.7782 4.22183Z" fill="currentColor"/>
+                    <path d="M7.05025 16.9498C7.44077 17.3403 7.44077 17.9735 7.05025 18.364L5.63604 19.7782C5.24551 20.1687 4.61235 20.1687 4.22183 19.7782C3.8313 19.3877 3.8313 18.7545 4.22183 18.364L5.63604 16.9498C6.02656 16.5593 6.65972 16.5593 7.05025 16.9498Z" fill="currentColor"/>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00006C7 6.02097 8.62837 3.42225 11.0437 2.04529C5.96861 2.52399 2 6.79571 2 12.0001C2 17.5229 6.47715 22.0001 12 22.0001C17.2044 22.0001 21.4761 18.0315 21.9548 12.9564Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <h1>Pomodoro Timer</h1>
+            <div id="focus-prompt" class="modal hidden">
+                <div class="modal-content">
+                    <h2>What are you focusing on?</h2>
+                    <input type="text" id="focus-input" placeholder="Enter your focus...">
+                    <button id="focus-submit">Start Focusing</button>
+                </div>
+            </div>
+            <div id="focus-display" class="focus-text hidden"></div>
+            <div class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="controls">
+                <button id="start">Start</button>
+                <button id="add-time">+5 min</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="status">
+                <p id="status-text">Time to focus!</p>
             </div>
         </div>
-        <div id="focus-display" class="focus-text hidden"></div>
-        <div class="timer">
-            <span id="minutes">25</span>:<span id="seconds">00</span>
-        </div>
-        <div class="controls">
-            <button id="start">Start</button>
-            <button id="add-time">+5 min</button>
-            <button id="reset">Reset</button>
-        </div>
-        <div class="status">
-            <p id="status-text">Time to focus!</p>
-        </div>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html> 

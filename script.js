@@ -116,6 +116,12 @@ function addFiveMinutes() {
     }
 }
 
+function closeModal() {
+    focusPrompt.classList.add('hidden');
+    startButton.textContent = 'Start';
+    focusInput.value = '';
+}
+
 startButton.addEventListener('click', toggleTimer);
 resetButton.addEventListener('click', resetTimer);
 modeToggleButton.addEventListener('click', toggleMode);
@@ -136,3 +142,17 @@ focusSubmit.addEventListener('click', () => {
 updateDisplay(WORK_TIME); 
 
 modeToggleButton.classList.add('work-mode'); // Set initial button style 
+
+// Add event listener for the Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !focusPrompt.classList.contains('hidden')) {
+        closeModal();
+    }
+});
+
+// Add event listener for clicking outside the modal
+focusPrompt.addEventListener('click', (e) => {
+    if (e.target === focusPrompt) {
+        closeModal();
+    }
+}); 
