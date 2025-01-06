@@ -1,0 +1,120 @@
+:root {
+  --primary: #3B82F6;
+  --primary-dark: #2563EB;
+  --secondary: #10B981;
+  --secondary-dark: #059669;
+  --background: #F8F9FD;
+  --surface: #FFFFFF;
+  --text: #2D3436;
+  --text-secondary: #636E72;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  text-align: center;
+  background-color: var(--surface);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  max-width: 480px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.timer {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  color: var(--primary);
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.controls button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+#start {
+  background-color: var(--primary);
+  color: white;
+}
+
+#start:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+#reset {
+  background-color: #EDF2F7;
+  color: var(--text);
+}
+
+#reset:hover {
+  background-color: #E2E8F0;
+  transform: translateY(-1px);
+}
+
+#mode-toggle {
+  background-color: var(--secondary);
+  color: white;
+}
+
+#mode-toggle:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-1px);
+}
+
+#mode-toggle.work-mode {
+  background-color: var(--primary);
+}
+
+#mode-toggle.work-mode:hover {
+  background-color: var(--primary-dark);
+}
+
+#mode-toggle.rest-mode {
+  background-color: var(--secondary);
+}
+
+#mode-toggle.rest-mode:hover {
+  background-color: var(--secondary-dark);
+}
+
+.status {
+  margin-top: 1.5rem;
+}
+
+#status-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+} 
